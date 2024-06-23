@@ -31,7 +31,7 @@ function ProjectInfo() {
                   minHeight: "25vh",
                   visibility: "visible",
                 }
-              : { minHeight: "20vh", visibility: "collapse", display: "none" }
+              : { visibility: "collapse", display: "none" }
           }
         />
         <div
@@ -76,6 +76,16 @@ function ProjectInfo() {
             <p>{project.overview}</p>
           </div>
         </div>
+        <div
+          style={
+            isDesktop
+              ? {
+                  minHeight: "25vh",
+                  visibility: "visible",
+                }
+              : { visibility: "collapse", display: "none" }
+          }
+        />
       </motion.div>
     </motion.div>
   );

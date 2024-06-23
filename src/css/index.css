@@ -640,8 +640,7 @@ nav a:hover {
     min-width: 100%;
   }
   .home {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr;
     min-height: 100%;
     overflow-y: scroll;
     scroll-snap-type: none;
