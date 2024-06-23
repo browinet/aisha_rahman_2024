@@ -1,0 +1,48 @@
+0. The layout of css
+ +------------------------------------------+
+ |                 Global                   |
+ | +--------------------------------------+ |
+ | |                 Nav                  | |
+ | +--------------------------------------+ |
+ | +----------+  +------------------------+ |
+ | | Sidebar  |  |         Content        | |
+ | |          |  |                        | |
+ | |          |  |                        | |
+ | |          |  |                        | |
+ | |          |  |                        | |
+ | |          |  |                        | |
+ | |          |  |                        | |
+ | +----------+  +------------------------+ |
+ +------------------------------------------+
+
+1. Global Styling: This is the basic structure of website 
+    - body
+    - container
+    - wrapper 
+
+2. Nav styling goes here 
+    - navbar
+    - logo
+    - links
+
+3. Side styling will go here
+    - motion(animates the side bar)
+    - homepage intro
+    - project info
+        -banner
+    
+4. Content will hold
+    - about
+    - content
+    - home
+        -Page
+            -Text
+            -Card
+    - portfolio 
+        -banner
+
+5. Media Query for max-width: 920px
+
+
+Make sure to remove all "DNU?"
+

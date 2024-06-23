@@ -1,0 +1,666 @@
+/*=============================================
+=            Global            =
+=============================================*/
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+:root {
+  --primary: #fed200;
+  --secondary: #d1d3d4;
+  --tert: #141414;
+  --bg: #ffffff;
+  --cardHeight: 70%;
+  --cardWidth: 70%;
+}
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  background-color: var(--tert);
+  font-family: "Montserrat", sans-serif;
+  color: var(--bg);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 1920px;
+  column-gap: 20px;
+  row-gap: 20px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+.p-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 1920px;
+
+  column-gap: 20px;
+  row-gap: 20px;
+  padding: 0 20px;
+  margin: auto;
+}
+
+.content {
+  flex-grow: 2;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.p-content {
+  display: flex;
+  gap: 20px;
+  overflow-y: scroll;
+  margin-bottom: 20px;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.content::-webkit-scrollbar {
+  display: none;
+}
+a {
+  color: var(--bg);
+}
+a:hover {
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}
+
+/*=====  End of Global  ======*/
+
+/*=============================================
+=            Nav            =
+=============================================*/
+nav {
+  flex-grow: 1;
+}
+nav a {
+  text-decoration: none;
+}
+nav a:hover {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.nav-desktop {
+  display: flex;
+  padding-top: 20px;
+  align-items: center;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.logo-icon svg {
+  display: block;
+  fill: var(--primary);
+  height: 100%;
+  width: 30px;
+}
+.logo-text h1 {
+  display: block;
+  position: relative;
+  font-optical-sizing: auto;
+  font-family: "Oswald", sans-serif;
+  font-style: normal;
+  text-wrap: nowrap;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.logo-text span {
+  color: var(--primary);
+}
+
+.logo-project svg {
+  width: 50px;
+}
+
+/* Links */
+
+.link {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.link a {
+  text-decoration: none;
+  color: #d1d3d4;
+}
+
+.link .active {
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/*=====  End of Nav  ======*/
+
+/*=============================================
+=            Panel            =
+=============================================*/
+/* Homepage Info */
+.title {
+  display: flex;
+  flex-grow: 1;
+  transform-origin: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 7.5px;
+  text-align: center;
+}
+
+.title h4 {
+  text-transform: uppercase;
+  font-size: clamp(1rem, 1.2vw + 1rem, 1.5rem);
+  font-weight: 800;
+  text-wrap: nowrap;
+}
+.title span {
+  color: var(--primary);
+  font-weight: 500;
+}
+.title p {
+  text-transform: uppercase;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-wrap: nowrap;
+}
+.side-links {
+  display: flex;
+  gap: 5px;
+  text-decoration: none;
+  font-size: 0.65em;
+  font-weight: 500;
+  color: var(--primary);
+  text-wrap: nowrap;
+  text-transform: uppercase;
+}
+
+.side-links a {
+  text-decoration: none;
+  font-style: normal;
+  color: var(--primary);
+  transition: all ease-in-out 0.1s;
+}
+.side-links a:hover {
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: 700;
+}
+.social-icons {
+  display: flex;
+  gap: 7.5px;
+}
+
+/* Project Info */
+.project {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  max-width: 385px;
+  overflow-y: scroll;
+}
+
+.project-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.banner-mobile {
+  display: none;
+}
+
+.project h1 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.project .tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+.project .tags p {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--tert);
+  background-color: var(--primary);
+  padding: 5px 10px;
+  border-radius: 30px;
+}
+.infos {
+  display: flex;
+  font-size: 0.85rem;
+  flex-direction: column;
+  line-height: 20px;
+  gap: 20px;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.info h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.info ul {
+  padding: 0 40px;
+  list-style: square;
+}
+.info ul li::marker {
+  color: var(--primary);
+}
+
+/*=====  End of Side  ======*/
+
+/*=============================================
+=            Content            =
+=============================================*/
+
+/* About */
+.about {
+  margin: auto;
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  max-width: 70%;
+}
+
+.about h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-top: 2px solid var(--primary);
+  border-bottom: 2px solid var(--primary);
+  padding: 10px 0px;
+  width: 100%;
+}
+.about-text {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.about-text h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.about-text p {
+  line-height: 1.2rem;
+}
+.skills-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.tool-list h3 {
+  text-transform: uppercase;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.tool-list ul {
+  padding: 0 30px;
+  list-style: square;
+}
+.tool-list ul li::marker {
+  color: var(--primary);
+}
+/* Contact */
+.contact-page {
+  display: flex;
+  background-color: var(--primary);
+  border-radius: 10px;
+  max-width: 500px;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  justify-self: center;
+  padding: 30px 20px;
+  margin: 60px auto;
+  color: var(--tert);
+}
+
+.contact-page h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.contact-page p {
+  line-height: 1.4;
+  font-weight: 400;
+}
+.contact-text {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.contact-icon {
+  fill: var(--tert);
+  max-width: 30px;
+}
+
+.contact-table {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: left;
+  justify-content: center;
+}
+
+.table-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.table-row a {
+  color: var(--tert);
+}
+
+/* Home */
+.home {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.home::-webkit-scrollbar {
+  display: none;
+}
+.frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 40vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bw-card {
+  z-index: 30;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.color-card {
+  z-index: 20;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Portfolio page */
+.portfolio {
+  display: grid;
+  grid-template-columns: 1fr;
+  overflow-y: scroll;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.banner-desktop {
+  display: block;
+  width: 100%;
+  min-height: 50vh;
+  background-size: cover;
+  background-position: center;
+}
+
+/*=====  End of Content  ======*/
+
+/*=============================================
+=            Meida Query            =
+=============================================*/
+@media screen and (max-width: 920px) {
+  /*----------  Global  ----------*/
+
+  .container {
+    gap: 0px;
+    height: 100%;
+  }
+
+  .p-container {
+    height: 100%;
+    gap: 0px;
+  }
+  .content {
+    flex-grow: 2;
+    padding: 20px 0;
+    margin-bottom: 0;
+    overflow-y: visible;
+    min-height: 100%;
+  }
+  .p-content {
+    overflow-y: visible;
+    min-height: 100%;
+    flex-direction: column;
+  }
+
+  /*----------  Nav  ----------*/
+  nav {
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--tert);
+    z-index: 60;
+  }
+
+  .nav-desktop {
+    display: none;
+  }
+
+  .nav-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nm-top {
+    display: flex;
+    justify-content: space-between;
+    z-index: 60;
+  }
+
+  .nm-button {
+    position: relative;
+    align-items: center;
+    width: 40px;
+    min-height: 100%;
+  }
+
+  .nm-button span {
+    background-color: var(--primary);
+    width: 100%;
+    height: 2.5px;
+    border-radius: 20px;
+    position: absolute;
+  }
+  .nm-bottom {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    transform-origin: top;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 50;
+    top: 0px;
+    left: 0px;
+    transform-origin: top;
+    background-color: var(--tert);
+  }
+  .nm-link {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .nm-link a {
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+
+  .nm-link a:hover {
+    color: var(--primary);
+  }
+  .nm-link .active {
+    border-radius: 5px;
+    color: var(--primary);
+  }
+  .nm-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--tert);
+    padding-bottom: 40px;
+  }
+  .nm-info a {
+    color: var(--primary);
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  /*----------  Side  ----------*/
+  /* Side */
+  .title {
+    justify-content: flex-start;
+    min-width: 100%;
+    flex-grow: 1;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+  }
+
+  .project-wrapper h1 {
+    align-items: center;
+    text-align: center;
+  }
+  .side-text {
+    align-items: center;
+  }
+  .social-icons {
+    display: none;
+  }
+
+  /* Project */
+  .project {
+    min-width: 100%;
+    align-items: center;
+    overflow-y: visible;
+  }
+
+  .banner-mobile {
+    display: block;
+    width: 100%;
+    min-height: 50vh;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .banner-desktop {
+    display: none;
+  }
+
+  .tags {
+    justify-content: center;
+  }
+
+  .infos {
+    align-items: center;
+    text-align: center;
+  }
+
+  .info ul {
+    padding: 0 40px;
+    font-size: 20px;
+    list-style: none;
+  }
+  .info p {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  /*----------  Content  ----------*/
+  .about {
+    min-width: 100%;
+  }
+  .home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: none;
+    gap: 20px;
+  }
+
+  .bw-card {
+    opacity: 0;
+  }
+
+  .portfolio {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow-y: visible;
+  }
+  .portfolio .frame {
+    display: none;
+    visibility: collapse;
+  }
+}
+/*=====  End of Meida Query  ======*/
