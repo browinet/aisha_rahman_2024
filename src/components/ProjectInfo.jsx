@@ -10,7 +10,7 @@ function ProjectInfo() {
   const { portId } = useParams();
   const project = Project.find((item) => item.id === portId);
 
-  const { pageTransition, isDesktop } = useContext(MyContext);
+  const { pageTransition } = useContext(MyContext);
   return (
     <motion.div
       className="project"
@@ -24,7 +24,7 @@ function ProjectInfo() {
         initial="initialFadeProject"
         animate="animateFadeProject"
       >
-        <div
+        {/* <div
           style={
             isDesktop
               ? {
@@ -33,7 +33,7 @@ function ProjectInfo() {
                 }
               : { visibility: "collapse", display: "none" }
           }
-        />
+        /> */}
         <div
           className="banner-mobile"
           style={{
@@ -71,12 +71,19 @@ function ProjectInfo() {
               ))}
             </ul>
           </div>
+          {project.client ? (
+            <div className="info">
+              <h2>Client:</h2>
+              <p>{project.client}</p>
+            </div>
+          ) : null}
+
           <div className="info">
             <h2>Objective:</h2>
             <p>{project.overview}</p>
           </div>
         </div>
-        <div
+        {/* <div
           style={
             isDesktop
               ? {
@@ -85,7 +92,7 @@ function ProjectInfo() {
                 }
               : { visibility: "collapse", display: "none" }
           }
-        />
+        /> */}
       </motion.div>
     </motion.div>
   );

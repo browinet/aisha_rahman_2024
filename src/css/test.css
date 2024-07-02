@@ -1,0 +1,52 @@
+:root {
+  --barHeight: 10px;
+  --buttonColor: #37333d;
+}
+button {
+  all: unset;
+}
+.t-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.button-wrapper {
+  background-color: white;
+  padding: 100px;
+  border-radius: 20px;
+}
+.burger-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.bar {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  height: 20px;
+  width: 200px;
+  background-color: var(--buttonColor);
+}
+
+.serif {
+  position: absolute;
+  background-color: var(--buttonColor);
+  transform-origin: top;
+  top: 0;
+  height: 40px;
+  width: 20px;
+  background-color: var(--buttonColor);
+  clip-path: polygon(71% 100%, 100% 100%, 100% 0, 0 0, 0 54%);
+}
+
+.serif-bottom {
+  position: absolute;
+  right: 0;
+  background-color: var(--buttonColor);
+  height: 60px;
+  width: 20px;
+}

@@ -42,7 +42,6 @@ body {
   flex-direction: column;
   height: 100vh;
   max-width: 1920px;
-
   column-gap: 20px;
   row-gap: 20px;
   padding: 0 20px;
@@ -279,6 +278,9 @@ nav a:hover {
 }
 .info ul li::marker {
   color: var(--primary);
+}
+.info p {
+  text-indent: 1rem;
 }
 
 /*=====  End of Side  ======*/
@@ -633,6 +635,7 @@ nav a:hover {
   .info p {
     text-align: center;
     font-size: 20px;
+    text-indent: 0px;
   }
 
   /*----------  Content  ----------*/
